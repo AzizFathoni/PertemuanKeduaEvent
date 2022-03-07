@@ -10,6 +10,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PertemuanKeduaEvent">
         <activity
+            android:name=".ActivityHasil"
+            android:exported="false"
+            android:label="@string/label2"
+            android:parentActivityName=".ActivityHasil"/>
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
