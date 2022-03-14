@@ -27,9 +27,9 @@ public class Formmenu extends AppCompatActivity {
         edtNama = findViewById(R.id.edNama);
         edtAlamat = findViewById(R.id.edAlamat);
         edtEmail = findViewById(R.id.edEmail);
-        edtPassword = findViewById(R.id.edPassword);
+        edtPassword = findViewById(R.id.edPass);
         edtrepass = findViewById(R.id.edrepass);
-        fab = findViewById(R.id.fabsave);
+        fab = findViewById(R.id.fabsimpan);
 
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -42,7 +42,7 @@ public class Formmenu extends AppCompatActivity {
                         edtrepass.getText().toString().isEmpty())
                 {
                     //menampilkan pesan notifikasi jika seluruh EditText wajib diisi
-                    Snackbar.make(view, "Wajib isi seluruh data !!!",Snackbar.LENGTH_LONG).show();
+                    Snackbar.make(view, "Wajib isi seluruh data !!!", Snackbar.LENGTH_LONG).show();
                 }
                 else
                 {
@@ -50,15 +50,16 @@ public class Formmenu extends AppCompatActivity {
                     {
                         Toast.makeText(getApplicationContext(), "Pendaftaran Berhasil...",
                                 Toast.LENGTH_LONG).show();
+                        Intent a = new Intent(getApplicationContext(), MainActivity.class);
+                        startActivity(a);
 
-                        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-                        startActivity(intent);
                     }
                     else
                     {
                         Snackbar.make(view, "Password dan Repassword harus sama!!!",
                                 Snackbar.LENGTH_LONG).show();
                     }
+
                 }
             }
         });
