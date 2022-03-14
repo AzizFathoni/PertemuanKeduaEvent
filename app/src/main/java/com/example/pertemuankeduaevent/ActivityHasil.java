@@ -13,8 +13,8 @@ public class ActivityHasil extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_hasil);
 
-        txEmail = findViewById(R.id.tvEmail);
-        txPassword = findViewById(R.id.tvPassword);
+        txEmail = findViewById(R.id.edAlamat);
+        txPassword = findViewById(R.id.edPassword);
 
         Bundle bundle = getIntent().getExtras();
 
@@ -23,7 +23,6 @@ public class ActivityHasil extends AppCompatActivity {
         String pass = bundle.getString("b");
 
         txEmail.setText(email);
-        txPassword.setText(pass);
-
-    }
+       txPassword.setText(pass);
+ }
 }
